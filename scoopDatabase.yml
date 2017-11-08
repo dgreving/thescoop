@@ -1,0 +1,82 @@
+comments:
+  '1': &ref_0
+    id: 1
+    body: geili!
+    username: yari
+    articleId: 1
+    upvotedBy:
+      - ominousThird
+    downvotedBy: []
+  '2': &ref_1
+    id: 2
+    body: test
+    username: yari
+    articleId: 2
+    upvotedBy: []
+    downvotedBy:
+      - davi
+      - yari
+      - ominousThird
+  '3': &ref_2
+    id: 3
+    body: |
+      lol
+    username: davi
+    articleId: 2
+    upvotedBy:
+      - davi
+      - yari
+      - ominousThird
+    downvotedBy: []
+users:
+  WHAT:
+    username: WHAT
+    articleIds: []
+    commentIds: []
+  davi:
+    username: davi
+    articleIds:
+      - 1
+    commentIds:
+      - 3
+  yari:
+    username: yari
+    articleIds:
+      - 2
+    commentIds:
+      - 1
+      - 2
+  ominousThird:
+    username: ominousThird
+    articleIds: []
+    commentIds: []
+articles:
+  '1':
+    id: 1
+    title: yo
+    url: www.www.de
+    username: davi
+    commentIds:
+      - 1
+    upvotedBy:
+      - davi
+      - yari
+    downvotedBy: []
+    comments:
+      - *ref_0
+  '2':
+    id: 2
+    title: ha-hi
+    url: www.thenews.com
+    username: yari
+    commentIds:
+      - 2
+      - 3
+    upvotedBy: []
+    downvotedBy:
+      - yari
+    comments:
+      - *ref_1
+      - *ref_2
+nextArticleId: 3
+nextCommentId: 4
